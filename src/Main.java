@@ -4,10 +4,10 @@ public class Main {
         //task1
 
         int clientOS = 1;
-        if (clientOS > 0) {
-            //     System.out.println("Установите версию приложения Android по ссылке.");
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения iOS по ссылке.");
         } else {
-            //           System.out.println("Установите версию приложения iOS по ссылке.");
+            System.out.println("Установите версию приложения Android по ссылке.");
         }
 
         //task2
@@ -43,25 +43,19 @@ public class Main {
 
         int deliveryDistance = 95;
 
-        boolean deliveryPeriod1 = deliveryDistance > 0 && deliveryDistance <= 20;
-        boolean deliveryPeriod2 = deliveryDistance > 20 && deliveryDistance <= 60;
-        boolean deliveryPeriod3 = deliveryDistance > 60 && deliveryDistance <= 100;
+        int deliveryDays = 1;
 
-        if (deliveryPeriod1) {
-            int deliveryPeriod = 1;
-            System.out.println("Потребуется дней " + deliveryPeriod);
+        if (deliveryDistance > 20) {
+            deliveryDays++;
         }
-        if (deliveryPeriod2) {
-            int deliveryPeriod = 2;
-            System.out.println("Потребуется дней " + deliveryPeriod);
+        if (deliveryDistance > 60) {
+            deliveryDays++;
         }
-        if (deliveryPeriod3) {
-            int deliveryPeriod = 3;
-            System.out.println("Потребуется дней " + deliveryPeriod);
-        }
+        System.out.println("Потребуется дней " + deliveryDays);
+
 //task 5
 
-        int monthNumber = 9;
+        int monthNumber = 13;
 
         switch (monthNumber) {
             case 12:
@@ -84,6 +78,8 @@ public class Main {
             case 11:
                 System.out.println(monthNumber + " это месяц осени.");
                 break;
+            default:
+                System.out.println("Некоректный месяц " + monthNumber);
         }
 
 
